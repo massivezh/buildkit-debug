@@ -1,0 +1,1157 @@
+{
+  "Op": {
+    "Op": {
+      "source": {
+        "identifier": "docker-image://docker.io/library/alpine:latest"
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:665ba8b2cdc0cb0200e2a42a6b3c0f8f684089f4cd1b81494fbb9805879120f7",
+  "OpMetadata": {
+    "caps": {
+      "source.image": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:665ba8b2cdc0cb0200e2a42a6b3c0f8f684089f4cd1b81494fbb9805879120f7",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "apk",
+            "add",
+            "--no-cache",
+            "git"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:a9d09ebb57e91b6af153cb668e4bbec53d493f61040d3c34d09185ccd3e789a6",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:a9d09ebb57e91b6af153cb668e4bbec53d493f61040d3c34d09185ccd3e789a6",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "git",
+            "clone",
+            "https://github.com/moby/buildkit.git",
+            "/go/src/github.com/moby/buildkit"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:e76a1dafe0859a8a06e9e0efa05ea41d6d02da0c52db8b7ad02c4f2c24033d68",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:e76a1dafe0859a8a06e9e0efa05ea41d6d02da0c52db8b7ad02c4f2c24033d68",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "git",
+            "checkout",
+            "-q",
+            "master"
+          ],
+          "cwd": "/go/src/github.com/moby/buildkit",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:f9e278ac9f2266e9d898741329e684d506cd18491d51231b1f6db69b5d951757",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "Op": {
+      "source": {
+        "identifier": "docker-image://docker.io/library/golang:1.20-alpine"
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:6acdf6c21c7065f5aa6015a44f031f8fe85edc8b1b15aa2fa71c07386ad8fe53",
+  "OpMetadata": {
+    "caps": {
+      "source.image": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:6acdf6c21c7065f5aa6015a44f031f8fe85edc8b1b15aa2fa71c07386ad8fe53",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "apk",
+            "add",
+            "--no-cache",
+            "g++",
+            "linux-headers"
+          ],
+          "env": [
+            "PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "GOPATH=/go"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:74b758afdf7d80131f2639caec49cf39686587a38dc87d9bf7cb69618476964f",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:74b758afdf7d80131f2639caec49cf39686587a38dc87d9bf7cb69618476964f",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "apk",
+            "add",
+            "--no-cache",
+            "git",
+            "libseccomp-dev",
+            "make"
+          ],
+          "env": [
+            "PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "GOPATH=/go"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:3d70e0f96a4bc493006c156624afc08f7a21c6d4b95cad78b7de0ba19f368c45",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:665ba8b2cdc0cb0200e2a42a6b3c0f8f684089f4cd1b81494fbb9805879120f7",
+        "index": 0
+      },
+      {
+        "digest": "sha256:3d70e0f96a4bc493006c156624afc08f7a21c6d4b95cad78b7de0ba19f368c45",
+        "index": 0
+      },
+      {
+        "digest": "sha256:f9e278ac9f2266e9d898741329e684d506cd18491d51231b1f6db69b5d951757",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "cp",
+            "-a",
+            "/src/go",
+            "/dest/"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          },
+          {
+            "input": 1,
+            "dest": "/dest",
+            "output": 1
+          },
+          {
+            "input": 2,
+            "dest": "/src",
+            "output": 2
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:a9096670491e0b32e2a2febf20b2fcefd63c6f1ec79b19cab7b6ef09fa45d1db",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:a9096670491e0b32e2a2febf20b2fcefd63c6f1ec79b19cab7b6ef09fa45d1db",
+        "index": 1
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "go",
+            "build",
+            "-o",
+            "/bin/buildkitd",
+            "./cmd/buildkitd"
+          ],
+          "env": [
+            "PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "GOPATH=/go"
+          ],
+          "cwd": "/go/src/github.com/moby/buildkit",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:78aefde28e730ac0e30949bebb63673050ee8c6daff6b1e2db6a9c185ce32282",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:a9d09ebb57e91b6af153cb668e4bbec53d493f61040d3c34d09185ccd3e789a6",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "git",
+            "clone",
+            "https://github.com/containerd/containerd.git",
+            "/go/src/github.com/containerd/containerd"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:1be123139477a10cc1ac6f88ab94c48f3f1aaf106d3f5686d5f10396ee6de5f5",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:1be123139477a10cc1ac6f88ab94c48f3f1aaf106d3f5686d5f10396ee6de5f5",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "git",
+            "checkout",
+            "-q",
+            "v1.2.9"
+          ],
+          "cwd": "/go/src/github.com/containerd/containerd",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:f6d1a982b06b2740b08f4102aa6dec11613de902bd7f52a4604ee1a8da727acc",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:3d70e0f96a4bc493006c156624afc08f7a21c6d4b95cad78b7de0ba19f368c45",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "apk",
+            "add",
+            "--no-cache",
+            "btrfs-progs-dev"
+          ],
+          "env": [
+            "PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "GOPATH=/go"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:dac775bf535e99d6223409f7edbc986c5714c15b805db9db67fe30c88beab633",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:665ba8b2cdc0cb0200e2a42a6b3c0f8f684089f4cd1b81494fbb9805879120f7",
+        "index": 0
+      },
+      {
+        "digest": "sha256:dac775bf535e99d6223409f7edbc986c5714c15b805db9db67fe30c88beab633",
+        "index": 0
+      },
+      {
+        "digest": "sha256:f6d1a982b06b2740b08f4102aa6dec11613de902bd7f52a4604ee1a8da727acc",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "cp",
+            "-a",
+            "/src/go",
+            "/dest/"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          },
+          {
+            "input": 1,
+            "dest": "/dest",
+            "output": 1
+          },
+          {
+            "input": 2,
+            "dest": "/src",
+            "output": 2
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:4822419cfdcc26ae7dfa25aad74826fe7b0e52b1dd5d2a011523c74a4999189d",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:4822419cfdcc26ae7dfa25aad74826fe7b0e52b1dd5d2a011523c74a4999189d",
+        "index": 1
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "make",
+            "bin/containerd"
+          ],
+          "env": [
+            "PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "GOPATH=/go"
+          ],
+          "cwd": "/go/src/github.com/containerd/containerd",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:4fe7d49fe641a428ed3a68f4921292df6b649e6565c04e5bb25081b8122162a0",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:a9d09ebb57e91b6af153cb668e4bbec53d493f61040d3c34d09185ccd3e789a6",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "git",
+            "clone",
+            "https://github.com/opencontainers/runc.git",
+            "/go/src/github.com/opencontainers/runc"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:b5e8ba1725675190a8f0b86069696da1f64f34b32f8608016f9c760769e69d75",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:b5e8ba1725675190a8f0b86069696da1f64f34b32f8608016f9c760769e69d75",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "git",
+            "checkout",
+            "-q",
+            "v1.0.0-rc8"
+          ],
+          "cwd": "/go/src/github.com/opencontainers/runc",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:7740643f8fdaa30d7d07bfa805d478fef781bb7ad83721aea77d0cc316f1eedc",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:665ba8b2cdc0cb0200e2a42a6b3c0f8f684089f4cd1b81494fbb9805879120f7",
+        "index": 0
+      },
+      {
+        "digest": "sha256:3d70e0f96a4bc493006c156624afc08f7a21c6d4b95cad78b7de0ba19f368c45",
+        "index": 0
+      },
+      {
+        "digest": "sha256:7740643f8fdaa30d7d07bfa805d478fef781bb7ad83721aea77d0cc316f1eedc",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "cp",
+            "-a",
+            "/src/go",
+            "/dest/"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          },
+          {
+            "input": 1,
+            "dest": "/dest",
+            "output": 1
+          },
+          {
+            "input": 2,
+            "dest": "/src",
+            "output": 2
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:966b31c7108b5f7ed1ee962cf781da7b93d4d18189ae04c231921a5f7616f98a",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:966b31c7108b5f7ed1ee962cf781da7b93d4d18189ae04c231921a5f7616f98a",
+        "index": 1
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "go",
+            "build",
+            "-o",
+            "/usr/bin/runc",
+            "./"
+          ],
+          "env": [
+            "PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "GOPATH=/go"
+          ],
+          "cwd": "/go/src/github.com/opencontainers/runc",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:9d3acdaa417973d10268d3c98c3d579fdaa1bd4be2bcea2a2a75e229c32a5919",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:a9096670491e0b32e2a2febf20b2fcefd63c6f1ec79b19cab7b6ef09fa45d1db",
+        "index": 1
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "go",
+            "build",
+            "-o",
+            "/bin/buildctl",
+            "./cmd/buildctl"
+          ],
+          "env": [
+            "PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+            "GOPATH=/go"
+          ],
+          "cwd": "/go/src/github.com/moby/buildkit",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:54358888f6092573da0364a58741e509cc22b81238504cc9b9adfb5363cd2422",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:665ba8b2cdc0cb0200e2a42a6b3c0f8f684089f4cd1b81494fbb9805879120f7",
+        "index": 0
+      },
+      {
+        "digest": "sha256:54358888f6092573da0364a58741e509cc22b81238504cc9b9adfb5363cd2422",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "cp",
+            "-a",
+            "/src/bin/buildctl",
+            "/dest/bin/"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          },
+          {
+            "input": 0,
+            "dest": "/dest",
+            "output": 1
+          },
+          {
+            "input": 1,
+            "dest": "/src",
+            "output": 2
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:9dec0e7edae141492ff86a784f95a51e96d725b1a3b8417b5b14f88f4755bfcf",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:665ba8b2cdc0cb0200e2a42a6b3c0f8f684089f4cd1b81494fbb9805879120f7",
+        "index": 0
+      },
+      {
+        "digest": "sha256:9dec0e7edae141492ff86a784f95a51e96d725b1a3b8417b5b14f88f4755bfcf",
+        "index": 1
+      },
+      {
+        "digest": "sha256:9d3acdaa417973d10268d3c98c3d579fdaa1bd4be2bcea2a2a75e229c32a5919",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "cp",
+            "-a",
+            "/src/usr/bin/runc",
+            "/dest/bin/"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          },
+          {
+            "input": 1,
+            "dest": "/dest",
+            "output": 1
+          },
+          {
+            "input": 2,
+            "dest": "/src",
+            "output": 2
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:01a9ec8151266eeb2c98e6495207b1ca56cec4d0aa08e791204b40a3decb3099",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:665ba8b2cdc0cb0200e2a42a6b3c0f8f684089f4cd1b81494fbb9805879120f7",
+        "index": 0
+      },
+      {
+        "digest": "sha256:01a9ec8151266eeb2c98e6495207b1ca56cec4d0aa08e791204b40a3decb3099",
+        "index": 1
+      },
+      {
+        "digest": "sha256:4fe7d49fe641a428ed3a68f4921292df6b649e6565c04e5bb25081b8122162a0",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "cp",
+            "-a",
+            "/src/go/src/github.com/containerd/containerd/bin/containerd",
+            "/dest/bin/"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          },
+          {
+            "input": 1,
+            "dest": "/dest",
+            "output": 1
+          },
+          {
+            "input": 2,
+            "dest": "/src",
+            "output": 2
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:d1397ac6f34bc8f48ed6e6976cdbb9e33cefcdc492cb2cddc1fb289d1d614b8e",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:665ba8b2cdc0cb0200e2a42a6b3c0f8f684089f4cd1b81494fbb9805879120f7",
+        "index": 0
+      },
+      {
+        "digest": "sha256:d1397ac6f34bc8f48ed6e6976cdbb9e33cefcdc492cb2cddc1fb289d1d614b8e",
+        "index": 1
+      },
+      {
+        "digest": "sha256:78aefde28e730ac0e30949bebb63673050ee8c6daff6b1e2db6a9c185ce32282",
+        "index": 0
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "cp",
+            "-a",
+            "/src/bin/buildkitd",
+            "/dest/bin/"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          },
+          {
+            "input": 1,
+            "dest": "/dest",
+            "output": 1
+          },
+          {
+            "input": 2,
+            "dest": "/src",
+            "output": 2
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:6228c4430157797d6389e0ffc6965560f479601d610dde92cd9bf4bad44874d2",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:6228c4430157797d6389e0ffc6965560f479601d610dde92cd9bf4bad44874d2",
+        "index": 1
+      }
+    ],
+    "Op": {
+      "exec": {
+        "meta": {
+          "args": [
+            "ls",
+            "-l",
+            "/bin"
+          ],
+          "cwd": "/",
+          "removeMountStubsRecursive": true
+        },
+        "mounts": [
+          {
+            "input": 0,
+            "dest": "/",
+            "output": 0
+          }
+        ]
+      }
+    },
+    "platform": {
+      "Architecture": "amd64",
+      "OS": "linux"
+    },
+    "constraints": {}
+  },
+  "Digest": "sha256:0ad0490f3c68e7ef53d88515a4167788f5655c3dc6a1e3e1f16401847971a3c7",
+  "OpMetadata": {
+    "caps": {
+      "exec.meta.base": true,
+      "exec.mount.bind": true
+    }
+  }
+}
+{
+  "Op": {
+    "inputs": [
+      {
+        "digest": "sha256:0ad0490f3c68e7ef53d88515a4167788f5655c3dc6a1e3e1f16401847971a3c7",
+        "index": 0
+      }
+    ],
+    "Op": null
+  },
+  "Digest": "sha256:8610f6fd2bc3e0e5e80d15fd9f06ca9154515907849ac0699f669b832d00acda",
+  "OpMetadata": {
+    "caps": {
+      "constraints": true,
+      "platform": true
+    }
+  }
+}
